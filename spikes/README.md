@@ -1,43 +1,32 @@
 Spikes
 ======
 
-## GCC Flags
+## gmp
 
--std=c99 -Wall -Werror -pedantic
+Investigate the multiple-precision library GMP https://gmplib.org/
 
-## Data Types
+## ieee
 
-Size of:
-* float
-* double
-* long double
-* etc.
+Documents about IEEE floating point numbers.
 
-## IEEE floating point
+## mpfr
 
-Types of numbers (normalized, denormalized)
+Investigate the floating-point multiple-precision library MPFR
+http://www.mpfr.org/
 
-Loss of precision
+## quad
 
-Special numbers:
-* Inf
-* -Inf
-* NaN
+Simplistic implementation of quadratic equation solver.
 
-Investigate scanf with special numbers
+## scanf
 
-Investigate sqrt with special numbers
+Investigate how to read floating point numbers from the user, including special
+cases like Inf and NaN.
 
-Obtain PDF "What computer scientists should know about IEEE floating point"
+## sizeof
 
-## Arbitrary precision
+Investigate the size and precision of floating point numbers.
 
-Investigate multiple-precision libraries
+## sqrt
 
-Investigate packages like Maple
-
-## Quadratic equations
-
-Look for writing on solving quadratic equation
-
-Start with Wikipedia
+Investigate the use of sqrt library function on special values.

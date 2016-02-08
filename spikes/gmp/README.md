@@ -1,6 +1,7 @@
 GMP 
 
-Some testing of GMP. GMP2.c is floating point arithmatic makefile goes with it. gmp.c is just me testing the functions
+Some testing of GMP. GMP2.c is floating point arithmatic makefile goes with it.
+gmp.c is just me testing the functions
 
 Multiple precision libraries:
 
