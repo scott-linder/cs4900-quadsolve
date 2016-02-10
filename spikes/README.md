@@ -30,3 +30,7 @@ Investigate the size and precision of floating point numbers.
 ## sqrt
 
 Investigate the use of sqrt library function on special values.
+
+## quadroots
+
+A quadratic equation solver using a multiple-precision library.
