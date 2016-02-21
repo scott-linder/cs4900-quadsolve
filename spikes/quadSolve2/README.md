@@ -1,0 +1,1 @@
+Quad solver without using mpfr library. Also more in the seperated style Kapenga wanted for making unit testing easier later.
