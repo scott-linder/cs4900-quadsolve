@@ -11,11 +11,11 @@
 int main()
 {
 	int rootNum =0;
-	Coef *coef= malloc(sizeof(*coef));
-	Root *root = malloc(sizeof(*root));
-    getInput(coef);
-	rootNum = numRoots(*coef);
-	getRoots(*coef,rootNum, root);
-	printRoots(rootNum, *root);
+	Coef coef;
+	Root root;
+	getInput(&coef);
+	rootNum = numRoots(coef);
+	getRoots(coef, rootNum, &root);
+	printRoots(rootNum, root);
 }
 
