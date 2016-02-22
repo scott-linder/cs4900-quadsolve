@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -std=c99 -Wall -Werror -pedantic
 LDLIBS = -lm
 
-quadmain: quadmain.c getRoots/getRoots.o numRoots/numRoots.o input/input.o output/output.o
+quadmain: quadmain.c getRoots/getRoots.o numRoots/numRoots.o input/input.o output/output.o sqrt/sqrt.o
 
 clean:
 	rm ./quadmain
