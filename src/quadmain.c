@@ -3,8 +3,11 @@
 #include <stdlib.h>
 #include <math.h>
 #include <mpfr.h>
-#include "quadHead.h"
-#include "quadInclude.h"
+#include "quadTypes.h"
+#include "input/input.c"
+#include "roots/numRoots/numRoots.c"
+#include "roots/getRoots/getRoots.c"
+#include "output/output.c"
 
 
 /*Functions*/
