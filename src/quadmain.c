@@ -1,14 +1,9 @@
 /*INCLUDES*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <mpfr.h>
 #include "quadTypes.h"
-#include "input/input.c"
-#include "roots/numRoots/numRoots.c"
-#include "roots/getRoots/getRoots.c"
-#include "output/output.c"
-
+#include "input/input.h"
+#include "numRoots/numRoots.h"
+#include "getRoots/getRoots.h"
+#include "output/output.h"
 
 /*Functions*/
 int main()

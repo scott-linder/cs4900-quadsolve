@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include "../quadTypes.h"
+
 int getInput(Coef *coef)
 {
 	printf("Enter a value for a: ");

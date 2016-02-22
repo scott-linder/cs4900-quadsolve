@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include "../quadTypes.h"
+
 /*prints the number of roots as well as the roots themself*/
 int printRoots(int numRoots, Root root)
 {

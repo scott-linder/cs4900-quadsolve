@@ -1,3 +1,6 @@
+#include <math.h>
+#include "../quadTypes.h"
+
 /*calculates the roots for the given quadratic equation
 * puts the results in the root structure
 */

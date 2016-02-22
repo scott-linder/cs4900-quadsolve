@@ -1,0 +1,1 @@
+int getInput(Coef *);

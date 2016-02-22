@@ -1,3 +1,6 @@
+#include <math.h>
+#include "../quadTypes.h"
+
 /* Roots takes the three input value and using the disciminate (b^2-4ac)
 * it determines how many roots this quadratic has. It will return 0 if double root,
 * return 1 if two real roots, and -1 if no real roots.
