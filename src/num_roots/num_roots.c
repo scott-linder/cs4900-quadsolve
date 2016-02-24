@@ -9,14 +9,14 @@ int num_roots(Coef coef)
 {
 	int retVal = 0;
 	double disc = 0;
-	/*Start Math Functions*/
+	/*Start Math Functions */
 	disc = (pow(coef.b, 2)) - (4 * coef.a * coef.c);
-	/*Comparisons*/
-	if(disc == 0){
-		retVal =0;
-	}else if(disc > 0){
+	/*Comparisons */
+	if (disc == 0) {
+		retVal = 0;
+	} else if (disc > 0) {
 		retVal = 1;
-	}else{
+	} else {
 		retVal = -1;
 	}
 	return retVal;

@@ -1,4 +1,4 @@
-/*INCLUDES*/
+ /*INCLUDES*/
 #include <stdlib.h>
 #include "quad_types.h"
 #include "input/input.h"
@@ -6,11 +6,10 @@
 #include "get_roots/get_roots.h"
 #include "output/output.h"
 #include "formatter/formatter.h"
-
 /*Functions*/
 int main()
 {
-	int rootNum =0;
+	int rootNum = 0;
 	Coef coef;
 	Root root;
 	char *buffer;
@@ -21,4 +20,3 @@ int main()
 	output(buffer);
 	free(buffer);
 }
-

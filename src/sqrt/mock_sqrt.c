@@ -34,45 +34,45 @@ static int flag = -1;
 // return    result    lsqrtx
 void setup_mock_sqrt(double lx, double lsqrtx, double leps)
 {
-    ex = x;
-    eps = leps;
-    sqrtx = lsqrtx;
-    count = 0;
-    flag = 0;
+	ex = x;
+	eps = leps;
+	sqrtx = lsqrtx;
+	count = 0;
+	flag = 0;
 }
 
 double qsolve_sqrt(double lx)
 {
-    if (fabs(ex - lx) > eps) {
-	flag = 1;
-    }
-    x = lx;
-    count++;
-    return sqrtx;
+	if (fabs(ex - lx) > eps) {
+		flag = 1;
+	}
+	x = lx;
+	count++;
+	return sqrtx;
 }
 
 // Returns 0 if the corr4eft argument was passed and only one call was made.
 // else there was a problem and retun 1
 int check_mock_sqrt(int *lcount, double *lx)
 {
-    int ret;
-    *lcount = count;
-    *lx = x;
-    if ((flag == 0) && (count == 1)) {
-	ret = 0;
-    } else {
-	ret = 1;
-    }
-    return ret;
+	int ret;
+	*lcount = count;
+	*lx = x;
+	if ((flag == 0) && (count == 1)) {
+		ret = 0;
+	} else {
+		ret = 1;
+	}
+	return ret;
 }
 
 void teardown_mock_sqrt()
 {
-    x = -1.0;
-    ex = -1.0;
-    eps = -1.0;
-    sqrtx = -1.0;
-    count = 0;
-    flag = -1;
-    return;
+	x = -1.0;
+	ex = -1.0;
+	eps = -1.0;
+	sqrtx = -1.0;
+	count = 0;
+	flag = -1;
+	return;
 }

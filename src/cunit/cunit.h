@@ -22,7 +22,6 @@ int cunit_init();
     fprintf(cunit_log, "%s\n", str ); \
 }
 
-
 #define assert_eq(str,a,b) { \
   if( a != b ) { \
     fprintf(cunit_log, "%s  LINE %d: %s, %d !== %d\n", \

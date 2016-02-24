@@ -5,17 +5,23 @@
 /*calculates the roots for the given quadratic equation
 * puts the results in the root structure
 */
-int get_roots(Coef coef,int num_roots, Root *root)
+int get_roots(Coef coef, int num_roots, Root * root)
 {
 	double root1, root2;
-	if(num_roots==0){ //-b/2a
-		root->x1 = (-coef.b)/(2*coef.a);
-	}else if(num_roots==1){ //-b+-sqrt(b2-4ac)/2a
-		root1 = (-coef.b + qsolve_sqrt((pow(coef.b, 2))-(4 * coef.a * coef.c)))/(2 * coef.a);
-		root2 = (-coef.b - qsolve_sqrt((pow(coef.b, 2))-(4 * coef.a * coef.c)))/(2 * coef.a);
+	if (num_roots == 0) {	//-b/2a
+		root->x1 = (-coef.b) / (2 * coef.a);
+	} else if (num_roots == 1) {	//-b+-sqrt(b2-4ac)/2a
+		root1 =
+		    (-coef.b +
+		     qsolve_sqrt((pow(coef.b, 2)) -
+				 (4 * coef.a * coef.c))) / (2 * coef.a);
+		root2 =
+		    (-coef.b -
+		     qsolve_sqrt((pow(coef.b, 2)) -
+				 (4 * coef.a * coef.c))) / (2 * coef.a);
 		root->x1 = root1;
 		root->x2 = root2;
-	}else{
+	} else {
 	}
 	return 0;
 }

@@ -1,1 +1,1 @@
-char* formatter(int , Root);
+char *formatter(int, Root);

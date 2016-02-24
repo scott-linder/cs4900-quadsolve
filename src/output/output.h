@@ -1,1 +1,1 @@
-int output(char*);
+int output(char *);
