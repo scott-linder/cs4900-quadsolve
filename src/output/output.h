@@ -1,1 +1,1 @@
-int printRoots(int , Root);
+int output(char*);
