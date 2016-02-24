@@ -15,15 +15,15 @@
 #include <stdlib.h>
 #include "../cunit/cunit.h"
 #include "../sqrt/mock_sqrt.h"
-#include "../quadTypes.h"
-#include "../numRoots/numRoots.h"
-#include "getRoots.h"
+#include "../quad_types.h"
+#include "../num_roots/num_roots.h"
+#include "get_roots.h"
 
 int main()
 {
     Coef coefs;			// a, b and c for the quadratic eqaution
     Root roots;			// Root struct with x1 and x1
-    int num, ret;		// return value from numRoots() and getRoots()
+    int num, ret;		// return value from num_roots() and get_roots()
     double a, b, c;		// scratch variables
     double x1, x2;		// scratch variables
     int count;			// number of times the mock object qsolve_sqrt(0 is called.
@@ -50,8 +50,8 @@ int main()
     sqrtd = sqrt(d);
 
     setup_mock_sqrt(d, sqrtd, cunit_dmacheps * 2.0 * d);
-    num = numRoots(coefs);
-    ret = getRoots(coefs, num, &roots);
+    num = num_roots(coefs);
+    ret = get_roots(coefs, num, &roots);
     assert_eq("ret", ret, 0);
     assert_feqrerr("x1", roots.x1, x2, 2.0 * cunit_dmacheps * 3.3);
     assert_feqrerr("x2", roots.x2, x1, 2.0 * cunit_dmacheps * 3.1);

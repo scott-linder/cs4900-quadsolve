@@ -2,12 +2,12 @@ CC = gcc
 CFLAGS = -std=c99 -Wall -Werror -pedantic
 LDLIBS = -lm
 
-quadmain: quadmain.c getRoots/getRoots.o formatter/formatter.o numRoots/numRoots.o input/input.o output/output.o sqrt/sqrt.o
+quadmain: quadmain.c get_roots/get_roots.o formatter/formatter.o num_roots/num_roots.o input/input.o output/output.o sqrt/sqrt.o
 
 clean:
 	rm ./quadmain
-	cd getRoots; make clean
-	cd numRoots; make clean
+	cd get_roots; make clean
+	cd num_roots; make clean
 	cd input; make clean
 	cd output; make clean
 	cd formatter; make clean

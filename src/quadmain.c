@@ -1,9 +1,9 @@
 /*INCLUDES*/
 #include <stdlib.h>
-#include "quadTypes.h"
+#include "quad_types.h"
 #include "input/input.h"
-#include "numRoots/numRoots.h"
-#include "getRoots/getRoots.h"
+#include "num_roots/num_roots.h"
+#include "get_roots/get_roots.h"
 #include "output/output.h"
 #include "formatter/formatter.h"
 
@@ -15,8 +15,8 @@ int main()
 	Root root;
 	char *buffer;
 	getInput(&coef);
-	rootNum = numRoots(coef);
-	getRoots(coef, rootNum, &root);
+	rootNum = num_roots(coef);
+	get_roots(coef, rootNum, &root);
 	buffer = formatter(rootNum, root);
 	output(buffer);
 	free(buffer);

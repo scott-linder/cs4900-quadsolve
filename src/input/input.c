@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../quadTypes.h"
+#include "../quad_types.h"
 
 int getInput(Coef *coef)
 {
