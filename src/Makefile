@@ -2,7 +2,14 @@ CC = gcc
 CFLAGS = -std=c99 -Wall -Werror -pedantic
 LDLIBS = -lm
 
-quadmain: quadmain.c get_roots/get_roots.o formatter/formatter.o num_roots/num_roots.o input/input.o output/output.o sqrt/sqrt.o
+MODS = get_roots num_roots input output formatter cunit sqrt
+
+quadmain: quadmain.c get_roots/get_roots.o formatter/formatter.o \
+	num_roots/num_roots.o input/input.o output/output.o sqrt/sqrt.o
+
+.PHONY: test
+test:
+	for mod in ${MODS}; do cd $$mod; make test; cd ..; done
 
 .PHONY: format
 format:
@@ -12,8 +19,4 @@ format:
 .PHONY: clean
 clean:
 	-rm ./quadmain
-	cd get_roots; make clean
-	cd num_roots; make clean
-	cd input; make clean
-	cd output; make clean
-	cd formatter; make clean
+	for mod in ${MODS}; do cd $$mod; make clean; cd ..; done
