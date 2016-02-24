@@ -5,4 +5,4 @@ input.o: input.c
 
 .PHONY: clean
 clean:
-	rm input.o
+	-rm input.o

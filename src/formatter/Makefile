@@ -5,4 +5,4 @@ formatter.o: formatter.c
 
 .PHONY: clean
 clean:
-	rm formatter.o
+	-rm formatter.o

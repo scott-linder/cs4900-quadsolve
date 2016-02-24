@@ -11,7 +11,7 @@ format:
 
 .PHONY: clean
 clean:
-	rm ./quadmain
+	-rm ./quadmain
 	cd get_roots; make clean
 	cd num_roots; make clean
 	cd input; make clean

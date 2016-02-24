@@ -5,4 +5,4 @@ output.o: output.c
 
 .PHONY: clean
 clean:
-	rm output.o
+	-rm output.o
