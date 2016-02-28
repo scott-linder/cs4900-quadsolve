@@ -9,4 +9,4 @@ t2: t2.c ../cunit/cunit.o inputVal.o
 
 .PHONY: clean
 clean:
-	-rm inputVal.o
+	-rm inputVal.o t1 t2
