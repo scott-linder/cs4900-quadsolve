@@ -5,7 +5,7 @@ LDLIBS = -lm
 MODS = get_roots num_roots input output formatter cunit sqrt
 
 quadmain: quadmain.c get_roots/get_roots.o formatter/formatter.o \
-	num_roots/num_roots.o input/input.o output/output.o sqrt/sqrt.o
+	num_roots/num_roots.o input/input.o validation/inputVal.o output/output.o sqrt/sqrt.o
 
 .PHONY: test
 test:
