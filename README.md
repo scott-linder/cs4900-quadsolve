@@ -19,3 +19,7 @@ Directories
 * doc/
 
     Documentation and standards.
+
+* test/
+
+    Functional tests.
