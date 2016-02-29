@@ -7,6 +7,11 @@ t1: t1.c ../cunit/cunit.o inputVal.o
 
 t2: t2.c ../cunit/cunit.o inputVal.o
 
+.PHONY: test
+test: t1 t2
+	./t1
+	./t2
+
 .PHONY: clean
 clean:
 	-rm inputVal.o t1 t2
