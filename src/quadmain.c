@@ -16,7 +16,7 @@ int main()
 	char *buffer;
 	char *input;
 	input = getInput(&coef);
-	inputVal(&coef,input);
+	inputVal(&coef, input);
 	rootNum = num_roots(coef);
 	get_roots(coef, rootNum, &root);
 	buffer = formatter(rootNum, root);

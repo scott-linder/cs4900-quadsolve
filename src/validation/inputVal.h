@@ -1,1 +1,1 @@
-int inputVal(Coef *coef, char * input);
+int inputVal(Coef * coef, char *input);

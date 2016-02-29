@@ -7,8 +7,8 @@ int main()
 {
 	Coef coefs;
 	int ret;
-	char * input = "1 2 1";
+	char *input = "1 2 1";
 	cunit_init();
-	ret = inputVal(&coefs,input);
-	assert_eq("ret",ret,1);
+	ret = inputVal(&coefs, input);
+	assert_eq("ret", ret, 1);
 }
