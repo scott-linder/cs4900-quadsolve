@@ -1,8 +1,21 @@
 Quadratic Equation Solver
 =========================
 
-For CS4900
+Client: CS4900
 
-Directories:
+Authors: Scott Linder, Ryan DePrekel, Justin Lanyon
 
-* spikes/ - investigations
+Directories
+-----------
+
+* spikes/
+
+    Investigations and fast prototypes.
+
+* src/
+
+    Production source code.
+
+* doc/
+
+    Documentation and standards.

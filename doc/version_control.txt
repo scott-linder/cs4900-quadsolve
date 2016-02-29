@@ -1,0 +1,11 @@
+The project repository is maintained in a git repository.
+http://www.git-scm.com/
+
+As git is decentralized, a server is required to make it collaborative. For
+this purpose we have chosen GitHub https://github.com/
+
+The repository is thus currently hosted at
+https://github.com/scott-linder/cs4900-quadsolve
+
+Git does not implement locking out portions of the repository, so it is the
+responsibility of the developers to communicate what each member is working on.

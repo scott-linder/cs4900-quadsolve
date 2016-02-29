@@ -1,0 +1,9 @@
+Source is divided into modules to allow for fine-grained unit testing.
+
+Unit testing is implemented for the `validation` and `get_roots` modules.
+
+The `cunit` framework is employed to make testing more uniform; it provides
+macros for asserting equalities/inequalities on primitive types, including
+floating point types.
+
+Additionally we employ a mocked `sqrt` function to test the `get_roots` module.

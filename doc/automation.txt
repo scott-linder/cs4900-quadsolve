@@ -1,0 +1,6 @@
+All automation in the project is accomplished via GNU make
+https://www.gnu.org/software/make/manual/make.pdf
+
+This is accomplished by nested Makefiles, one per sub-directory. Common
+phony targets are decided on so that their invocation at the root of the
+project will recurse into all submodules. These include `clean` and `test`.
