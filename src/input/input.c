@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../quad_types.h"
 
-char *getInput(Coef * coef)
+char *get_input(Coef * coef)
 {
 	char *input = malloc(sizeof(char) * 50);
 	printf("Enter a values: ");
