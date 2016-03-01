@@ -1,1 +1,1 @@
-char *get_input(Coef * coef);
+char *get_input();

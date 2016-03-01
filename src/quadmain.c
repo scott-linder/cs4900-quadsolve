@@ -15,7 +15,7 @@ int main()
 	Root root;
 	char *buffer;
 	char *input;
-	input = get_input(&coef);
+	input = get_input();
 	if (!input_val(&coef, input)) {
 		output("invalid input");
 		exit(1);
