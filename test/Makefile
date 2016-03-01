@@ -1,5 +1,5 @@
-TESTS = t1 t2 t3
+TESTS = test_nan_input test_no_roots test_single_root test_two_real_roots
 
 .PHONY: test
 test: ${TESTS}
-	for test in ${TESTS}; do ./$$test; done
+	for test in ${TESTS}; do echo $$test; ./$$test; done

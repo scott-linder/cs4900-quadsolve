@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "3 4 2" | ../quadsolve | diff - <(cat <<EOF
+Enter values: There are no real roots
+EOF
+)
