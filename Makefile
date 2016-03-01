@@ -4,6 +4,7 @@ deploy:
 
 .PHONY: clean
 clean:
+	-rm -r doc/doxygen
 	cd src; make clean
 
 # all tests
@@ -19,3 +20,7 @@ utest:
 .PHONY: ftest
 ftest:
 	cd test; make test
+
+.PHONY: doc
+doc:
+	doxygen Doxyfile
