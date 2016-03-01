@@ -5,6 +5,7 @@ deploy:
 .PHONY: clean
 clean:
 	-rm -r doc/doxygen
+	-rm quadsolve
 	cd src; make clean
 
 # all tests
