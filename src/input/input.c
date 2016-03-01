@@ -16,7 +16,7 @@
 char *get_input()
 {
 	char *input = malloc(sizeof(char) * 50);
-	printf("Enter a values: ");
+	printf("Enter values: ");
 	fgets(input, sizeof(char) * 50, stdin);
 	return input;
 }

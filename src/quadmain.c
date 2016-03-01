@@ -27,7 +27,7 @@ int main()
 	char *input;
 	input = get_input();
 	if (!input_val(&coef, input)) {
-		output("invalid input");
+		output("Invalid input");
 		exit(1);
 	}
 	rootNum = num_roots(coef);

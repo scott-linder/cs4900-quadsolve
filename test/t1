@@ -1,3 +1,8 @@
 #!/bin/bash
 
-echo "5 9 0" | ../quadsolve | diff - t1.out
+echo "5 9 0" | ../quadsolve | diff - <(cat <<EOF
+Enter values: There are 2 real roots
+The first root is: 0.000000
+The second root is: -1.800000
+EOF
+)

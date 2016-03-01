@@ -1,4 +1,4 @@
-TESTS = t1
+TESTS = t1 t2 t3
 
 .PHONY: test
 test: ${TESTS}

@@ -27,14 +27,14 @@ char *formatter(int num_roots, Root root)
 	char *buffer = malloc(BUFF * sizeof(char));
 	if (num_roots == 1) {
 		sprintf(buffer,
-			"This is a Single/Double root\nThe root is: %lf\n",
+			"This is a Single/Double root\nThe root is: %lf",
 			root.x1);
 	} else if (num_roots == 2) {
 		sprintf(buffer,
-			"There are 2 real roots\nThe first root is: %lf\nThe second root is: %lf\n",
+			"There are 2 real roots\nThe first root is: %lf\nThe second root is: %lf",
 			root.x1, root.x2);
 	} else {
-		sprintf(buffer, "There are no real roots\n");
+		sprintf(buffer, "There are no real roots");
 	}
 
 	return buffer;
