@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "../quad_types.h"
 #include "../cunit/cunit.h"
-#include "inputVal.h"
+#include "input_val.h"
 
 int main()
 {
@@ -9,6 +9,6 @@ int main()
 	int ret;
 	char *input = "1 a 1";
 	cunit_init();
-	ret = inputVal(&coefs, input);
+	ret = input_val(&coefs, input);
 	assert_eq("ret", ret, 0);
 }

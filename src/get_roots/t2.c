@@ -13,6 +13,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "../cunit/cunit.h"
 #include "../sqrt/mock_sqrt.h"
 #include "../quad_types.h"
@@ -51,12 +52,12 @@ int main()
 	setup_mock_sqrt(d, sqrtd, cunit_dmacheps * 2.0 * d);
 	num = num_roots(coefs);
 	ret = get_roots(coefs, num, &roots);
-	assert_eq("ret", ret, 0);
+	assert_eq("ret", ret, true);
 	assert_feqrerr("x1", roots.x1, x2, 2.0 * cunit_dmacheps * 3.3);
 	assert_feqrerr("x2", roots.x2, x1, 2.0 * cunit_dmacheps * 3.1);
 	ret = check_mock_sqrt(&count, &x);
 	snprintf(str, 99, "count ret = %d x =%20.61e", count, x);
-	assert_eq(str, ret, 1);
+	assert_eq(str, ret, 0);
 
 	exit(0);
 }

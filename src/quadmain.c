@@ -1,4 +1,9 @@
- /*INCLUDES*/
+/**
+ * @file quadmain.c
+ * @date Feb 29, 2016
+ * @brief Coordinates all modules.
+ */
+
 #include <stdlib.h>
 #include "quad_types.h"
 #include "input/input.h"
@@ -7,7 +12,12 @@
 #include "get_roots/get_roots.h"
 #include "output/output.h"
 #include "formatter/formatter.h"
-/*Functions*/
+
+/**
+ * @brief Entry point for program.
+ *
+ * Coordinates all modules.
+ */
 int main()
 {
 	int rootNum = 0;

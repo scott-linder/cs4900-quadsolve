@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 #include "../cunit/cunit.h"
 #include "../quad_types.h"
 #include "../num_roots/num_roots.h"
@@ -20,7 +21,7 @@ int main()
 	coefs.c = x1 * x2;
 	num = num_roots(coefs);
 	ret = get_roots(coefs, num, &roots);
-	assert_eq("ret", ret, 0);
+	assert_eq("ret", ret, true);
 	assert_feqrerr("x1", roots.x1, x1, 10.0 * cunit_dmacheps);
 	assert_feqrerr("x2", roots.x2, x2, 10.0 * cunit_dmacheps);
 }
