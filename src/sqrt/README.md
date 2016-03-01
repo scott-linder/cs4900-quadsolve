@@ -1,0 +1,4 @@
+sqrt
+====
+
+Mockable sqrt function.
