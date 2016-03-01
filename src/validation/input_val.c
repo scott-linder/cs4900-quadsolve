@@ -5,6 +5,7 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 #include <stdbool.h>
 #include "../quad_types.h"
 
@@ -21,5 +22,7 @@ bool input_val(Coef * coef, char *input)
 	/* input validation */
 	if (!input)
 		return false;
-	return sscanf(input, "%lf %lf %lf", &coef->a, &coef->b, &coef->c) == 3;
+
+	return sscanf(input, "%lf %lf %lf", &coef->a, &coef->b, &coef->c) == 3
+		&& isfinite(coef->a) && isfinite(coef->b) && isfinite(coef->c);
 }
