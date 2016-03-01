@@ -5,6 +5,7 @@
  */
 
 #include <stdio.h>
+#include <stdbool.h>
 #include "../quad_types.h"
 
 /**
@@ -15,7 +16,10 @@
  *
  * @return True if input is good, false if input is bad.
  */
-int input_val(Coef * coef, char *input)
+bool input_val(Coef * coef, char *input)
 {
+	/* input validation */
+	if (!input)
+		return false;
 	return sscanf(input, "%lf %lf %lf", &coef->a, &coef->b, &coef->c) == 3;
 }

@@ -15,6 +15,10 @@
  */
 bool output(char *s)
 {
+	/* input validation */
+	if (!s)
+		return false;
+
 	puts(s);
 	return true;
 }
