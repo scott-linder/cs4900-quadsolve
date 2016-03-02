@@ -20,4 +20,5 @@ format:
 .PHONY: clean
 clean:
 	-rm ./quadmain
+	-rm ./log.txt
 	for mod in ${MODS}; do cd $$mod; make clean; cd ..; done

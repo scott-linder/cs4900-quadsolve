@@ -5,6 +5,8 @@
  */
 
 #include <math.h>
+#include <stdio.h>
+#include "../quad_types.h"
 
 /**
  * @brief Calculate square root.
@@ -15,9 +17,27 @@
  */
 double qsolve_sqrt(double x)
 {
+	#ifdef Logging
+		FILE * logFile;
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\tPassed to qsolve_sqrt():\n");
+		fprintf(logFile, "\t\tx: %lf\n",x);
+		fclose(logFile);
+	#endif
+
+	double sqt = 0;
 	/* input validation */
 	if (!isfinite(x) || x < 0)
 		return -1.0;
+	
+	sqt = sqrt(x);
 
-	return sqrt(x);
+	#ifdef Logging
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\tReturned from qsolve_sqrt():\n");
+		fprintf(logFile, "\t\tsqt: %lf\n",sqt);
+		fclose(logFile);
+	#endif
+
+	return sqt;
 }

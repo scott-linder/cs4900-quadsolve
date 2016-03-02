@@ -18,5 +18,11 @@ char *get_input()
 	char *input = malloc(sizeof(char) * 50);
 	printf("Enter values: ");
 	fgets(input, sizeof(char) * 50, stdin);
+	#ifdef Logging
+		FILE * logFile;
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\nReturn Value from get_input(): %s",input);
+		fclose(logFile);
+	#endif
 	return input;
 }

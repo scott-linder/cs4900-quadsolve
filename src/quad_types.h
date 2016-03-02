@@ -20,3 +20,6 @@ typedef struct {
 	double x1; ///< First real root (if present).
 	double x2; ///< Second real root (if present).
 } Root;
+
+#define Logging
+

@@ -5,6 +5,7 @@
  */
 
 #include <math.h>
+#include <stdio.h>
 #include "../quad_types.h"
 
 /**
@@ -18,6 +19,15 @@
  */
 int num_roots(Coef coef)
 {
+	#ifdef Logging
+		FILE * logFile;
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\nPassed parameters to num_roots():\n");
+		fprintf(logFile, "\tCoef.a: %lf Coef.b:%lf Coef.c: %lf \n"
+			,coef.a,coef.b,coef.c);
+		fclose(logFile);
+	#endif
+	
 	/* input validation */
 	if (!(isfinite(coef.a) && isfinite(coef.b) && isfinite(coef.c)))
 		return -1;
@@ -34,5 +44,12 @@ int num_roots(Coef coef)
 	} else {
 		retVal = 0;
 	}
+
+	#ifdef Logging
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "Return value from num_roots():\n");
+		fprintf(logFile, "\tretVal: %d\n",retVal);
+		fclose(logFile);
+	#endif
 	return retVal;
 }

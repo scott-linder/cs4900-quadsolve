@@ -5,6 +5,7 @@
  */
 
 #include <math.h>
+#include <stdio.h>
 #include <stdbool.h>
 #include "../quad_types.h"
 #include "../sqrt/sqrt.h"
@@ -20,7 +21,16 @@
  * @return True on success, false on error.
  */
 bool get_roots(Coef coef, int num_roots, Root * root)
-{
+{	
+	#ifdef Logging
+		FILE * logFile;
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\nPassed parameters to get_roots():\n");
+		fprintf(logFile, "\tCoef.a: %lf Coef.b:%lf Coef.c: %lf num_roots: %d\n"
+			,coef.a,coef.b,coef.c,num_roots);
+		fclose(logFile);
+	#endif
+	
 	/* input validation */
 	if (!(isfinite(coef.a) && isfinite(coef.b) && isfinite(coef.c)))
 		return false;
@@ -37,5 +47,13 @@ bool get_roots(Coef coef, int num_roots, Root * root)
 		root->x1 = (-coef.b + sroot) / (2 * coef.a);
 		root->x2 = (-coef.b - sroot) / (2 * coef.a);
 	}
+
+	#ifdef Logging
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "Return value(s) from get_roots():\n");
+		fprintf(logFile, "\tRoot.X1:%lf Root.X2:%lf\n",root->x1,root->x2);
+		fclose(logFile);
+	#endif
+
 	return true;
 }

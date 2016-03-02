@@ -19,10 +19,19 @@
  */
 bool input_val(Coef * coef, char *input)
 {
+	#ifdef Logging
+		FILE * logFile;
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\nPassed parameters to input_val():\n");
+		fprintf(logFile, "\tCoef.a: %lf Coef.b:%lf Coef.c: %lf input:%s"
+			,coef->a,coef->b,coef->c,input);
+		fclose(logFile);
+	#endif
 	/* input validation */
 	if (!input)
 		return false;
-
+	
 	return sscanf(input, "%lf %lf %lf", &coef->a, &coef->b, &coef->c) == 3
 		&& isfinite(coef->a) && isfinite(coef->b) && isfinite(coef->c);
+	
 }

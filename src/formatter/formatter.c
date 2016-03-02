@@ -20,6 +20,15 @@
  */
 char *formatter(int num_roots, Root root)
 {
+	#ifdef Logging
+		FILE * logFile;
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "\nPassed parameters to formatter():\n");
+		fprintf(logFile, "\tnum_roots = %d Root.x1: %lf Root.x2: %lf\n",
+			num_roots,root.x1, root.x2);
+		fclose(logFile);
+	#endif
+
 	/* input validation */
 	if (num_roots < 0 || num_roots > 2)
 		return NULL;
@@ -36,6 +45,13 @@ char *formatter(int num_roots, Root root)
 	} else {
 		sprintf(buffer, "There are no real roots");
 	}
+
+	#ifdef Logging
+		logFile = fopen("log.txt","a");
+		fprintf(logFile, "Return value from formatter():\n");
+		fprintf(logFile, "\tBuffer: %s\n",buffer);
+		fclose(logFile);
+	#endif
 
 	return buffer;
 }
